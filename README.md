@@ -2,7 +2,7 @@
 
 The GeoThai logo, colors, icons and usage rules, built from one typeface by one script.
 
-[👉 Overview](./docs/overview.png) · [Presentation](./docs/presentation.html)
+[👉 Overview](./docs/overview.png) · [Presentation](./docs/presentation.md)
 
 ## Features
 
