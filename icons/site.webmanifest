@@ -1,7 +1,7 @@
 {
   "name": "GeoThai",
   "short_name": "GeoThai",
-  "theme_color": "#B5452A",
+  "theme_color": "#000000",
   "background_color": "#FFFFFF",
   "display": "standalone",
   "icons": [

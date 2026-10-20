@@ -15,8 +15,6 @@ from fontTools.ttLib import TTFont
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 FONT = os.path.join(ROOT, 'fonts', 'BaiJamjuree-SemiBold.ttf')
 
-LATERITE = '#B5452A'
-LATERITE_LIGHT = '#EE8461'
 BLACK = '#000000'
 WHITE = '#FFFFFF'
 
@@ -177,8 +175,6 @@ def wordmark_svg(color, H=100):
 
 VERSIONS = {
     # name: (symbol colour, wordmark colour)
-    'color': (LATERITE, BLACK),
-    'color-on-dark': (LATERITE_LIGHT, WHITE),
     'black': (BLACK, BLACK),
     'white': (WHITE, WHITE),
 }
@@ -198,7 +194,7 @@ def build_svgs():
         write(f'logo/horizontal/geothai-horizontal-{version}.svg', horizontal_svg(sym, word))
         write(f'logo/stacked/geothai-stacked-{version}.svg', stacked_svg(sym, word))
         write(f'logo/wordmark/geothai-wordmark-{version}.svg', wordmark_svg(word))
-    write('logo/symbol/geothai-symbol-small.svg', symbol_svg(LATERITE, tip_depth=TIP_DEPTH_SMALL, pad=10))
+    write('logo/symbol/geothai-symbol-small.svg', symbol_svg(BLACK, tip_depth=TIP_DEPTH_SMALL, pad=10))
 
 
 def build_icons():
@@ -208,8 +204,9 @@ def build_icons():
     def png(svg_text, px):
         return Image.open(io.BytesIO(cairosvg.svg2png(bytestring=svg_text.encode(), output_width=px, output_height=px)))
 
-    small = symbol_svg(LATERITE, tip_depth=TIP_DEPTH_SMALL, pad=10)
-    write('icons/favicon.svg', small)
+    small = symbol_svg(BLACK, tip_depth=TIP_DEPTH_SMALL, pad=10)
+    # browsers with a dark tab bar read the SVG favicon; the PNG and ICO stay black
+    write('icons/favicon.svg', small.replace('<path', '<style>@media (prefers-color-scheme: dark) { path { fill: #FFFFFF } }</style><path', 1))
     os.makedirs(os.path.join(ROOT, 'icons'), exist_ok=True)
     frames = [png(small, px).convert('RGBA') for px in (16, 32, 48)]
     frames[0].save(os.path.join(ROOT, 'icons', 'favicon.ico'), sizes=[(16, 16), (32, 32), (48, 48)], append_images=frames[1:])
@@ -234,9 +231,9 @@ def build_icons():
         return svg(size, size, f'<rect width="{size}" height="{size}" fill="{bg}"/>'
                                f'<path d="{pin(scale, (size - pw) / 2, top)}" fill="{fg}"/>')
 
-    app = write('icons/app-icon.svg', tile(LATERITE, WHITE))
-    avatar = write('icons/avatar.svg', full(LATERITE, WHITE))
-    maskable = full(LATERITE, WHITE, mark=0.46)
+    app = write('icons/app-icon.svg', tile(BLACK, WHITE))
+    avatar = write('icons/avatar.svg', full(BLACK, WHITE))
+    maskable = full(BLACK, WHITE, mark=0.46)
     for name, text, sizes in (('apple-touch-icon', open(app).read(), (180,)), ('icon', open(app).read(), (192, 512)),
                               ('maskable', maskable, (512,)), ('avatar', open(avatar).read(), (500, 1024))):
         for px in sizes:
@@ -244,7 +241,7 @@ def build_icons():
             png(text, px).save(os.path.join(ROOT, 'icons', f'{name}{suffix}.png'))
 
     write('icons/site.webmanifest', json.dumps({
-        'name': 'GeoThai', 'short_name': 'GeoThai', 'theme_color': LATERITE, 'background_color': WHITE,
+        'name': 'GeoThai', 'short_name': 'GeoThai', 'theme_color': BLACK, 'background_color': WHITE,
         'display': 'standalone',
         'icons': [
             {'src': '/icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
@@ -257,7 +254,7 @@ def build_icons():
         '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
         '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
         '<link rel="manifest" href="/site.webmanifest">\n'
-        f'<meta name="theme-color" content="{LATERITE}">\n'))
+        f'<meta name="theme-color" content="{BLACK}">\n'))
 
 
 if __name__ == '__main__':

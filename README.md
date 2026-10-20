@@ -7,7 +7,7 @@ The GeoThai logo, colors, icons and usage rules, built from one typeface by one 
 ## Features
 
 - One symbol: the G of the wordmark's typeface, with its lower curve drawn out into the tip of a location pin. One letter says the name and the place
-- Four lockups, each in four color versions, as outlined SVG
+- Four lockups in black and white, as outlined SVG
 - A small-size symbol with a longer tip for 16 px favicons
 - Web and app icons: favicon, Apple touch icon, PWA icons, maskable icon, social avatar, web manifest
 - Every file made again from the font by [`scripts/build.py`](./scripts/build.py)
@@ -21,14 +21,12 @@ The GeoThai logo, colors, icons and usage rules, built from one typeface by one 
 | Symbol     | Avatars, app icons, favicons, small spaces         | [`logo/symbol/`](./logo/symbol)         |
 | Wordmark   | Text-only contexts, after the symbol already shows | [`logo/wordmark/`](./logo/wordmark)     |
 
-Each version comes in four colors:
+Each version comes in two colors:
 
-| File suffix      | Symbol         | Wordmark | Background                         |
-| ---------------- | -------------- | -------- | ---------------------------------- |
-| `-color`         | Laterite       | Black    | White, light tints                 |
-| `-color-on-dark` | Laterite Light | White    | Black, dark UI                     |
-| `-black`         | Black          | Black    | One-color print, light backgrounds |
-| `-white`         | White          | White    | Photos, Laterite, dark backgrounds |
+| File suffix | Logo  | Background                                |
+| ----------- | ----- | ----------------------------------------- |
+| `-black`    | Black | White, light backgrounds, one-color print |
+| `-white`    | White | Black, dark UI, photos with a calm area   |
 
 ## Clear Space
 
@@ -46,16 +44,14 @@ In the horizontal lockup, the symbol's G is 1.3 H tall and centered on the caps,
 
 ## Color
 
-| Name           | HEX       | RGB         | CMYK       | Use                            |
-| -------------- | --------- | ----------- | ---------- | ------------------------------ |
-| Laterite       | `#B5452A` | 181 69 42   | 0 62 77 29 | Symbol, key UI accents         |
-| Laterite Light | `#EE8461` | 238 132 97  | 0 45 59 7  | Symbol on dark backgrounds     |
-| Black          | `#000000` | 0 0 0       | 0 0 0 100  | Wordmark, text, one-color logo |
-| White          | `#FFFFFF` | 255 255 255 | 0 0 0 0    | Backgrounds                    |
+| Name  | HEX       | RGB         | CMYK      | Use                       |
+| ----- | --------- | ----------- | --------- | ------------------------- |
+| Black | `#000000` | 0 0 0       | 0 0 0 100 | Logo, text, app icons     |
+| White | `#FFFFFF` | 255 255 255 | 0 0 0 0   | Backgrounds, logo on dark |
 
-Laterite is the red-brown of laterite stone, the earth of Thai and Khmer temples. It is warm in a category where most brands are blue.
+The brand has no accent color. The shape of the G-pin carries the identity. Black on white is 21 : 1.
 
-Contrast: Laterite on white is 5.46 : 1. Laterite Light on Black is 8.11 : 1. Black on White is 21 : 1. CMYK values are conversions. Proof them on paper before a print run.
+A color for the brand was tested and dropped: the red-brown candidates sat close to the error red of developer tools, to Thai brands and to a common AI default.
 
 ## Typography
 
@@ -67,18 +63,18 @@ Contrast: Laterite on white is 5.46 : 1. Laterite Light on Black is 8.11 : 1. Bl
 
 [`icons/`](./icons) holds the web and app set:
 
-| File                                                                       | Use                                                          |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `favicon.ico`, `favicon.svg`, `favicon-16/32/48.png`                       | Browser tabs                                                 |
-| `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `maskable-512.png` | Home screens and PWA                                         |
-| `avatar.svg`, `avatar-500.png`, `avatar-1024.png`                          | GitHub org, npm, social profiles (square, crops to a circle) |
-| `app-icon.svg`                                                             | App icon master                                              |
-| `site.webmanifest`, `head-snippet.html`                                    | Copy into a website                                          |
+| File                                                                       | Use                                                                            |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `favicon.ico`, `favicon.svg`, `favicon-16/32/48.png`                       | Browser tabs                                                                   |
+| `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `maskable-512.png` | Home screens and PWA                                                           |
+| `avatar.svg`, `avatar-500.png`, `avatar-1024.png`                          | GitHub org, npm, social profiles (square, crops to a circle). White G on black |
+| `app-icon.svg`                                                             | App icon master                                                                |
+| `site.webmanifest`, `head-snippet.html`                                    | Copy into a website                                                            |
 
 ## Do Not
 
 - Stretch, squash, rotate or slant the logo.
-- Recolor it outside the palette, or use Laterite for the wordmark.
+- Recolor it. Use black or white only.
 - Add shadows, outlines, gradients or effects.
 - Move, resize or swap the parts of a lockup.
 - Put it on a busy photo without a calm area or a solid panel.
@@ -95,7 +91,7 @@ python3 scripts/build.py
 
 ## Why?
 
-The old GeoThai logo was a map of Thailand in blue. Most map and geodata brands use a map, a globe or a pin in blue, so it looked like all of them. It also had no link to the name. The new symbol starts from the letter G of the wordmark, adds the pin, and uses Laterite, a warm color that no other brand in this group uses.
+The old GeoThai logo was a map of Thailand in blue. Most map and geodata brands use a map, a globe or a pin in blue, so it looked like all of them. It also had no link to the name. The new symbol starts from the letter G of the wordmark and adds the pin. It is black and white, so it sits next to any product without a clash.
 
 ## License
 
