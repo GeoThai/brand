@@ -1,17 +1,18 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./docs/banner-dark.png">
-  <img alt="GeoThai" src="./docs/banner-light.png">
-</picture>
+# GeoThai brand
 
-# GeoThai Brand
+The GeoThai logo, colors, icons and usage rules, built from one typeface by one script.
 
-The GeoThai logo, colours, icons and usage rules.
+[👉 Overview](./docs/overview.png) · [Presentation](./docs/presentation.html)
 
-See the [overview](./docs/overview.png) and the [presentation](./docs/presentation.html).
+## Features
+
+- One symbol: the G of the wordmark's typeface, with its lower curve drawn out into the tip of a location pin. One letter says the name and the place
+- Four lockups, each in four color versions, as outlined SVG
+- A small-size symbol with a longer tip for 16 px favicons
+- Web and app icons: favicon, Apple touch icon, PWA icons, maskable icon, social avatar, web manifest
+- Every file made again from the font by [`scripts/build.py`](./scripts/build.py)
 
 ## The Logo
-
-**Idea:** the symbol is the G of the wordmark's typeface, with its lower curve drawn out into the tip of a location pin. One letter says the name and the place.
 
 | Version    | Use                                                | Files                                   |
 | ---------- | -------------------------------------------------- | --------------------------------------- |
@@ -20,20 +21,20 @@ See the [overview](./docs/overview.png) and the [presentation](./docs/presentati
 | Symbol     | Avatars, app icons, favicons, small spaces         | [`logo/symbol/`](./logo/symbol)         |
 | Wordmark   | Text-only contexts, after the symbol already shows | [`logo/wordmark/`](./logo/wordmark)     |
 
-Each version comes in four colourways:
+Each version comes in four colors:
 
-| File suffix      | Symbol         | Wordmark | Background                          |
-| ---------------- | -------------- | -------- | ----------------------------------- |
-| `-color`         | Laterite       | Black    | White, light tints                  |
-| `-color-on-dark` | Laterite Light | White    | Black, dark UI                      |
-| `-black`         | Black          | Black    | One-colour print, light backgrounds |
-| `-white`         | White          | White    | Photos, Laterite, dark backgrounds  |
+| File suffix      | Symbol         | Wordmark | Background                         |
+| ---------------- | -------------- | -------- | ---------------------------------- |
+| `-color`         | Laterite       | Black    | White, light tints                 |
+| `-color-on-dark` | Laterite Light | White    | Black, dark UI                     |
+| `-black`         | Black          | Black    | One-color print, light backgrounds |
+| `-white`         | White          | White    | Photos, Laterite, dark backgrounds |
 
 ## Clear Space
 
-Keep a clear zone of half the wordmark's cap height (**0.5 H**) on every side. The SVG files already include this zone. The zone scales with the logo, so never use a fixed distance.
+Keep a clear zone of half the wordmark's cap height (0.5 H) on every side. The SVG files already include this zone. The zone scales with the logo, so never use a fixed distance.
 
-In the horizontal lockup, the symbol's G is 1.3 H tall and centred on the caps, and the gap to the wordmark is 0.6 H. Do not change these sizes.
+In the horizontal lockup, the symbol's G is 1.3 H tall and centered on the caps, and the gap to the wordmark is 0.6 H. Do not change these sizes.
 
 ## Minimum Size
 
@@ -43,14 +44,14 @@ In the horizontal lockup, the symbol's G is 1.3 H tall and centred on the caps, 
 | Stacked    | 64 px wide                                                                                                                             |
 | Symbol     | 24 px tall. Below 24 px, use [`logo/symbol/geothai-symbol-small.svg`](./logo/symbol/geothai-symbol-small.svg), which has a longer tip. |
 
-## Colour
+## Color
 
-| Name           | HEX       | RGB         | CMYK       | Use                             |
-| -------------- | --------- | ----------- | ---------- | ------------------------------- |
-| Laterite       | `#B5452A` | 181 69 42   | 0 62 77 29 | Symbol, key UI accents          |
-| Laterite Light | `#EE8461` | 238 132 97  | 0 45 59 7  | Symbol on dark backgrounds      |
-| Black          | `#000000` | 0 0 0       | 0 0 0 100  | Wordmark, text, one-colour logo |
-| White          | `#FFFFFF` | 255 255 255 | 0 0 0 0    | Backgrounds                     |
+| Name           | HEX       | RGB         | CMYK       | Use                            |
+| -------------- | --------- | ----------- | ---------- | ------------------------------ |
+| Laterite       | `#B5452A` | 181 69 42   | 0 62 77 29 | Symbol, key UI accents         |
+| Laterite Light | `#EE8461` | 238 132 97  | 0 45 59 7  | Symbol on dark backgrounds     |
+| Black          | `#000000` | 0 0 0       | 0 0 0 100  | Wordmark, text, one-color logo |
+| White          | `#FFFFFF` | 255 255 255 | 0 0 0 0    | Backgrounds                    |
 
 Laterite is the red-brown of laterite stone, the earth of Thai and Khmer temples. It is warm in a category where most brands are blue.
 
@@ -58,7 +59,7 @@ Contrast: Laterite on white is 5.46 : 1. Laterite Light on Black is 8.11 : 1. Bl
 
 ## Typography
 
-- Wordmark and headings: [Bai Jamjuree](https://github.com/cadsondemak/Bai-Jamjuree) SemiBold by Cadson Demak. It has Thai and Latin in one family. Licence: SIL Open Font License, in [`fonts/OFL.txt`](./fonts/OFL.txt).
+- Wordmark and headings: [Bai Jamjuree](https://github.com/cadsondemak/Bai-Jamjuree) SemiBold by Cadson Demak. It has Thai and Latin in one family. License: SIL Open Font License, in [`fonts/OFL.txt`](./fonts/OFL.txt).
 - Body text: Bai Jamjuree Regular, or the system sans-serif.
 - The wordmark in the logo files is outlined. Do not retype it.
 
@@ -77,7 +78,7 @@ Contrast: Laterite on white is 5.46 : 1. Laterite Light on Black is 8.11 : 1. Bl
 ## Do Not
 
 - Stretch, squash, rotate or slant the logo.
-- Recolour it outside the palette, or use Laterite for the wordmark.
+- Recolor it outside the palette, or use Laterite for the wordmark.
 - Add shadows, outlines, gradients or effects.
 - Move, resize or swap the parts of a lockup.
 - Put it on a busy photo without a calm area or a solid panel.
@@ -85,12 +86,16 @@ Contrast: Laterite on white is 5.46 : 1. Laterite Light on Black is 8.11 : 1. Bl
 
 ## Rebuild
 
-Every logo and icon file is made from the typeface by one script. To change a size or a colour, edit [`scripts/build.py`](./scripts/build.py) and run it:
+Every logo and icon file is made from the typeface by one script. To change a size or a color, edit [`scripts/build.py`](./scripts/build.py) and run it:
 
 ```bash
 pip install fonttools cairosvg pillow
 python3 scripts/build.py
 ```
+
+## Why?
+
+The old GeoThai logo was a map of Thailand in blue. Most map and geodata brands use a map, a globe or a pin in blue, so it looked like all of them. It also had no link to the name. The new symbol starts from the letter G of the wordmark, adds the pin, and uses Laterite, a warm color that no other brand in this group uses.
 
 ## License
 
